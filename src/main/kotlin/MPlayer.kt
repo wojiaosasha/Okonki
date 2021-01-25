@@ -286,17 +286,6 @@ open class MPlayer : Application() {
                         durColumn.cellValueFactory = PropertyValueFactory<Track, String>("duration")
                         table.columns.addAll(numberColumn, nameColumn, durColumn)
 
-
-                        /*table.setRowFactory { tv ->
-                            val row: TableRow<Track> = TableRow()
-                            row.setOnMouseClicked { event ->
-                                if (event.clickCount === 2 && !row.isEmpty()) {
-                                    val rowData: Track = row.getItem()
-                                    System.out.println(rowData)
-                                }
-                            }
-                            row
-                        }*/
                         table.setRowFactory { _ ->
                             val row: TableRow<Track> = TableRow()
                             row.setOnMouseClicked { event ->
